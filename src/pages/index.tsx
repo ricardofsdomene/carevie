@@ -215,8 +215,8 @@ export default function Page() {
                 </Flex>
 
                 <Flex
-                  h={"27.5vw"}
-                  w={"27.5vw"}
+                  h={"37.5vw"}
+                  w={"37.5vw"}
                   position="absolute"
                   zIndex={0}
                   right={20}
