@@ -20,6 +20,9 @@ import * as EmailValidator from "email-validator";
 
 import {
   FaArrowRight,
+  FaCheck,
+  FaCheckSquare,
+  FaClosedCaptioning,
   FaFacebook,
   FaGoogle,
   FaInstagram,
@@ -27,6 +30,7 @@ import {
   FaMailchimp,
   FaMapPin,
   FaNetworkWired,
+  FaNotEqual,
   FaPencilAlt,
   FaPhone,
   FaPython,
@@ -34,7 +38,12 @@ import {
   FaTiktok,
 } from "react-icons/fa";
 
-import { IoIosArrowForward, IoIosMail } from "react-icons/io";
+import {
+  IoIosArrowForward,
+  IoIosMail,
+  IoMdClose,
+  IoMdCloseCircleOutline,
+} from "react-icons/io";
 import {
   SiExpo,
   SiExpress,
@@ -393,7 +402,7 @@ export default function Page() {
                 w={300}
                 position="absolute"
                 zIndex={0}
-                right={-200}
+                right={0}
                 style={{
                   borderRadius: "50%",
                   backgroundImage:
@@ -492,7 +501,8 @@ export default function Page() {
           <SimpleGrid
             spacingX={10}
             spacingY={5}
-            p="6"
+            px="6"
+            pb="6"
             columns={[1, 1, 2, 2, 2, 2]}
             spacing="0px"
           >
@@ -582,22 +592,27 @@ export default function Page() {
           maxW={1200}
           mx="auto"
         >
-          <Flex flexDir="column" px={mobile ? "8" : "8"} py={100}>
+          <Flex
+            flexDir="column"
+            px={mobile ? "14" : "28"}
+            pt={mobile ? 70 : 100}
+            pb={mobile ? 50 : 100}
+          >
             <Text
               color="#FFF"
-              textAlign="left"
+              textAlign={mobile ? "left" : "left"}
               fontFamily="Poppins"
               fontWeight="bold"
-              fontSize={mobile ? "2rem" : "2.5rem"}
+              fontSize={mobile ? "2.5rem" : "3rem"}
             >
               QUEM SOMOS?
             </Text>
             <Text
-              mt="20"
+              mt={mobile ? "10" : "20"}
               color="#FFF"
               textAlign={"left"}
               fontFamily="Poppins"
-              fontSize={mobile ? "1rem" : "1.3rem"}
+              fontSize={mobile ? "1.1rem" : "1.3rem"}
             >
               Carevie é uma consultoria de negócios e marketing projetada para
               implementar ou aprimorar os processos de vendas da sua clínica
@@ -610,26 +625,231 @@ export default function Page() {
               Nossa equipe de profissionais médicos pode ajudá-lo a melhorar o
               desempenho do seu negócio digital e obter melhores resultados."
             </Text>
+            {!mobile && (
+              <Flex
+                mt="10"
+                bg="#014BEA"
+                justify="center"
+                align="center"
+                borderRadius="5"
+                py="3"
+                px="6"
+                w="-webkit-fit-content"
+                boxShadow="0px 0px 14px 4px #014BEA"
+              >
+                <Text color="#FFF" fontWeight="bold" fontFamily="Poppins">
+                  CLIQUE E AGENDE SUA SESSÃO ESTRATÉGICA GRATUITA
+                </Text>
+              </Flex>
+            )}
           </Flex>
-          <Flex flexDir="column" mx="10" w="100%" p={mobile ? "12" : 0}>
-            <Image
-              src="https://images.pexels.com/photos/5867730/pexels-photo-5867730.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              style={{
-                borderRadius: 10,
-                boxShadow: "rgba(122, 178, 238, 0.6) 0 0 200px",
-                height: "auto",
-                width: "100%",
-              }}
-            />
-            <Text
-              my="2"
-              color="#FFF"
-              textAlign={"left"}
-              fontFamily="Poppins"
-              fontSize={mobile ? "1rem" : "1rem"}
-            >
-              Dentista e CEO
+          <Flex flexDir="column" mx="10" w="100%" px={mobile ? "12" : 0}>
+            {desktop && (
+              <Image
+                src="https://images.pexels.com/photos/5867730/pexels-photo-5867730.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                style={{
+                  borderRadius: 10,
+                  boxShadow: "rgba(122, 178, 238, 0.6) 0 0 50px",
+                  height: "auto",
+                  width: mobile ? "80%" : "100%",
+                }}
+              />
+            )}
+            {mobile && (
+              <Flex
+                bg="#014BEA"
+                justify="center"
+                align="center"
+                borderRadius="5"
+                py="3"
+                px="6"
+                w="-webkit-fit-content"
+                boxShadow="0px 0px 14px 4px #014BEA"
+              >
+                <Text
+                  color="#FFF"
+                  fontWeight="bold"
+                  textAlign="center"
+                  fontFamily="Poppins"
+                >
+                  CLIQUE E AGENDE SUA SESSÃO ESTRATÉGICA GRATUITA
+                </Text>
+              </Flex>
+            )}
+          </Flex>
+        </Flex>
+      </Flex>
+    );
+  }
+
+  function Jumbo4() {
+    function Item({ label = "" }) {
+      return (
+        <Flex align="center">
+          <Flex
+            p="4"
+            px="6"
+            boxShadow="rgba(255, 255, 255, 0.1) 0 0 10px"
+            borderRadius="25"
+            align="center"
+          >
+            <FaCheck color="#014BEA" fontSize="8rem" />
+
+            <Text ml="6" fontFamily="Poppins" color="#FFF" fontSize="1rem">
+              {label}
             </Text>
+          </Flex>
+        </Flex>
+      );
+    }
+
+    return (
+      <Flex flexDir="column" py={mobile ? 20 : 50} bg="#111" mt="20">
+        <Flex
+          w="100%"
+          align="center"
+          flexDir={mobile ? "column" : "column"}
+          maxW={1200}
+          mx="auto"
+        >
+          <Flex flexDir="column" px={mobile ? "8" : "8"}>
+            <Text
+              color="#FFF"
+              textAlign={mobile ? "center" : "center"}
+              fontFamily="Poppins"
+              fontSize={mobile ? "2rem" : "2.5rem"}
+            >
+              ESSA SESSÃO ESTRATÉGICA{" "}
+              <span style={{ fontWeight: "bold" }}>É PERFEITA PARA:</span>
+            </Text>
+          </Flex>
+          <SimpleGrid
+            mt="16"
+            spacingX={10}
+            spacingY={5}
+            px="6"
+            columns={[1, 1, 2, 2, 2, 2]}
+            spacing="0px"
+          >
+            <Item label="Dentistas que desejam: Aumentar o fluxo de pacientes nos seus consultórios, elevando seu faturamento líquido e serem melhor remunerados pela hora trabalhada." />
+            <Item label="Dentistas que desejam: Largar a vida corrida de plantões e ter mais tempo para viver a vida sob suas próprias regras, sejam elas quais forem." />
+          </SimpleGrid>
+          <SimpleGrid
+            mt="6"
+            spacingX={10}
+            spacingY={5}
+            px="6"
+            columns={[1, 1, 2, 2, 2, 2]}
+            spacing="0px"
+          >
+            <Item label="Dentistas que buscam maximizar suas taxas de conversão através da estruturação de um setor comercial sólido e robusto." />
+            <Item label="Clínicas e Dentistas que já possuem algum grau de inserção no mercado digital, mas que almejam atingir a excelência em termos de tráfego pago." />
+          </SimpleGrid>
+          <SimpleGrid
+            mt="6"
+            spacingX={10}
+            spacingY={5}
+            px="6"
+            columns={[1, 1, 2, 2, 2, 2]}
+            spacing="0px"
+          >
+            <Item label="Dentistas e Médicos que procuram por uma assessoria de Marketing que enxerga o seu negócio como prioridade." />
+            <Item label="Clínicas e Dentistas que procuram por uma assessoria de Marketing que enxerga o seu negócio como prioridade." />
+          </SimpleGrid>
+        </Flex>
+      </Flex>
+    );
+  }
+  function Jumbo5() {
+    function Item({ label = "" }) {
+      return (
+        <Flex align="center" w="100%">
+          <Flex
+            p="4"
+            px="6"
+            boxShadow="rgba(255, 255, 255, 0.1) 0 0 10px"
+            borderRadius="25"
+            align="center"
+            w={mobile ? 400 : 500}
+          >
+            <IoMdCloseCircleOutline
+              color="#92312B"
+              fontSize={mobile ? "2rem" : "3.5rem"}
+            />
+
+            <Text ml="6" fontFamily="Poppins" color="#FFF" fontSize="1rem">
+              {label}
+            </Text>
+          </Flex>
+        </Flex>
+      );
+    }
+
+    return (
+      <Flex flexDir="column" pt={mobile ? 20 : 50} pb={10}>
+        <Flex
+          w="100%"
+          align="center"
+          flexDir={mobile ? "column" : "column"}
+          maxW={1200}
+          mx="auto"
+        >
+          <Flex flexDir="column" px={mobile ? "8" : "8"}>
+            <Text
+              color="#FFF"
+              textAlign={mobile ? "center" : "center"}
+              fontFamily="Poppins"
+              fontSize={mobile ? "1.65rem" : "2.5rem"}
+            >
+              EXCELÊNCIA DEMANDA FOCO, ENTÃO… <br />
+              <span style={{ fontWeight: "bold" }}>
+                NÃO OFERECEMOS OUTROS SERVIÇOS COMO:
+              </span>
+            </Text>
+          </Flex>
+          <SimpleGrid
+            mt="16"
+            spacingX={10}
+            spacingY={5}
+            px="6"
+            columns={[1, 1, 2, 2, 2, 2]}
+            spacing="0px"
+          >
+            <Item label="Gestão de mídias sociais" />
+            <Item label="Secretaria Remota" />
+          </SimpleGrid>
+          <SimpleGrid
+            mt="6"
+            spacingX={10}
+            spacingY={5}
+            px="6"
+            columns={[1, 1, 2, 2, 2, 2]}
+            spacing="0px"
+          >
+            <Item label="Email Marketing" />
+            <Item label="Criação de conteúdo" />
+          </SimpleGrid>
+          <Flex p={mobile ? "8" : 0}>
+            <Flex
+              mt="10"
+              bg="#014BEA"
+              justify="center"
+              align="center"
+              borderRadius="5"
+              py="3"
+              px="6"
+              w="-webkit-fit-content"
+              boxShadow="0px 0px 28px 4px #014BEA"
+            >
+              <Text
+                color="#FFF"
+                fontWeight="bold"
+                textAlign="center"
+                fontFamily="Poppins"
+              >
+                CLIQUE E AGENDE SUA SESSÃO ESTRATÉGICA GRATUITA
+              </Text>
+            </Flex>
           </Flex>
         </Flex>
       </Flex>
@@ -644,6 +864,8 @@ export default function Page() {
         <Jumbo1 />
         <Jumbo2 />
         <Jumbo3 />
+        <Jumbo4 />
+        <Jumbo5 />
 
         <Flex
           bg="#000"
@@ -665,17 +887,21 @@ export default function Page() {
               }}
             />
           </Flex>
-          <Flex flexDir="column"></Flex>
-          <Flex flexDir="column">
-            <Text fontFamily="Poppins" fontSize={mobile ? "0.7rem" : "1rem"}>
-              CareVie.
+          <Flex flexDir="column" mt="4">
+            <Text fontFamily="Poppins" fontSize={mobile ? "1rem" : "1rem"}>
+              (11) 91579-9139
+            </Text>
+            <Text fontFamily="Poppins" fontSize={mobile ? "1rem" : "1rem"}>
+              contato@carevie.com
+            </Text>
+            <Text fontFamily="Poppins" mt="4" fontSize={mobile ? "1rem" : "1rem"}>
+              Calçada Antares, 1444 - Alphaville | CEP: 06443-065
             </Text>
             <Text
               mt="4"
               fontFamily="Poppins"
               fontSize={mobile ? "0.7rem" : "1rem"}
-            >
-            </Text>
+            ></Text>
           </Flex>
         </Flex>
       </Flex>
