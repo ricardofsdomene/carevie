@@ -161,7 +161,7 @@ export default function Page() {
           </Flex>
         ) : (
           <Flex h={mobile ? "auto" : "100vh"} bg="#000102" flexDir="column">
-            <Flex h="100%" w="100%" pt={200} px={100}>
+            <Flex h="100%" w="100%" pt={100} px={100}>
               <Flex
                 zIndex={2}
                 flexDir="column"
@@ -179,24 +179,24 @@ export default function Page() {
                 />
                 <Text
                   mt="10vh"
-                  maxW={mobile ? 400 : 700}
                   fontFamily="Poppins"
                   fontWeight="bold"
                   fontSize={mobile ? "1.5rem" : tablet ? "2.5rem" : "2.5rem"}
                 >
-                  Marketing Pago de Dentistas
-                  <br /> para Dentistas - Resultados, Seriedade e
-                  Profissionalismo.
+                  Cuidando da sua presença digital e alcançando novos pacientes
+                  com nossas soluções de marketing para consultórios médicos.
                 </Text>
                 <Text
                   fontFamily="Poppins"
-                  maxW={mobile ? 400 : 700}
+                  maxW={mobile ? 600 : 700}
                   mt="6"
                   fontSize={mobile ? "1rem" : "1.3rem"}
                 >
-                  Obtenha uma assessoria em marketing odontológico de alto
-                  nível, direcionada a dentistas, para ampliar a receita de sua
-                  clínica ou consultório.
+                  Sua estratégia de marketing médico personalizada - Resultados
+                  comprovados e compromisso com excelência. Aumente sua presença
+                  online e conquiste mais pacientes com nossos serviços de
+                  tráfego pago para consultórios médicos, utilizando a nossa
+                  metodologia "Medboost"
                 </Text>
                 <Flex
                   mt="10"
@@ -215,8 +215,8 @@ export default function Page() {
                 </Flex>
 
                 <Flex
-                  h={"37.5vw"}
-                  w={"37.5vw"}
+                  h={800}
+                  w={800}
                   position="absolute"
                   zIndex={0}
                   right={20}
@@ -228,109 +228,6 @@ export default function Page() {
                 />
               </Flex>
             </Flex>
-            {/* <Flex w="100%" align="center">
-              <Flex
-                bg="#333"
-                style={{
-                  height: 2,
-                  width: "5vw",
-                }}
-              />
-              <Flex
-                cursor="default"
-                border="3px solid #333"
-                borderRadius="full"
-                px="4"
-                py="2"
-                justify="center"
-                align="center"
-              >
-                <Text
-                  fontFamily="Poppins"
-                  whiteSpace="nowrap"
-                  fontSize={mobile ? "0.5rem" : "1rem"}
-                >
-                  Landing Page
-                </Text>
-              </Flex>
-              <Flex
-                bg="#333"
-                style={{
-                  height: 2,
-                  width: "8vw",
-                }}
-              />
-              <Flex
-                cursor="default"
-                border="3px solid #333"
-                borderRadius="full"
-                px="4"
-                py="2"
-                justify="center"
-                align="center"
-              >
-                <Text
-                  fontFamily="Poppins"
-                  whiteSpace="nowrap"
-                  fontSize={mobile ? "0.5rem" : "1rem"}
-                >
-                  Trafego pago
-                </Text>
-              </Flex>
-              <Flex
-                bg="#333"
-                style={{
-                  height: 2,
-                  width: "8vw",
-                }}
-              />
-              <Flex
-                cursor="default"
-                border="3px solid #333"
-                borderRadius="full"
-                px="4"
-                py="2"
-                justify="center"
-                align="center"
-              >
-                <Text
-                  fontFamily="Poppins"
-                  whiteSpace="nowrap"
-                  fontSize={mobile ? "0.5rem" : "1rem"}
-                >
-                  Funil de venda
-                </Text>
-              </Flex>
-              <Flex
-                align="center"
-                style={{
-                  transform: "rotate(-45deg)",
-                  transformOrigin: "top left",
-                }}
-              >
-                <Flex
-                  mt={-5}
-                  cursor="default"
-                  borderRadius="full"
-                  px="6"
-                  py="2"
-                  justify="center"
-                  align="center"
-                >
-                  <Text
-                    style={{
-                      transform: "rotate(45deg)",
-                    }}
-                    fontFamily="Poppins"
-                    ml={mobile ?  "40" : 600}
-                    position="absolute"
-                    fontSize={mobile ? "4rem" : "8rem"}
-                  >
-                    🚀
-                  </Text>
-                </Flex>
-              </Flex>
-            </Flex> */}
           </Flex>
         )}
         {mobile && (
@@ -354,8 +251,9 @@ export default function Page() {
                 fontWeight="bold"
                 mt={mobile ? -10 : 0}
               >
-                Marketing Pago de Dentistas para <br /> Dentistas - Resultados,
-                Seriedade e Profissionalismo.
+                Cuidando da sua presença digital
+                <br />e alcançando novos pacientes com nossas soluções de
+                marketing para consultórios médicos.
               </Text>
               <Text
                 mt="6"
@@ -364,9 +262,11 @@ export default function Page() {
                 textAlign={mobile ? "left" : "center"}
                 fontSize={mobile ? "1rem" : "1.55rem"}
               >
-                Obtenha uma assessoria em marketing odontológico de alto nível,
-                direcionada a dentistas, para ampliar a receita de sua clínica
-                ou consultório.
+                Sua estratégia de marketing médico personalizada - Resultados
+                comprovados e compromisso com excelência. Aumente sua presença
+                online e conquiste mais pacientes com nossos serviços de tráfego
+                pago para consultórios médicos, utilizando a nossa metodologia
+                "Medboost"
               </Text>
 
               <Flex
@@ -457,9 +357,10 @@ export default function Page() {
                 fontFamily="Poppins"
                 fontSize={mobile ? "1.2rem" : "1.6rem"}
               >
-                Primeiro, montamos um planejamento estratégico através de uma
-                equipe técnica e especializada, focada exclusivamente no seu
-                negócio (Clínica ou Consultório).
+                Nossa equipe de especialistas em marketing médico desenvolve um
+                planejamento estratégico personalizado, com foco exclusivo no
+                seu negócio, para que sua clínica ou consultório médico alcance
+                o sucesso desejado.
               </Text>
             </Flex>
             <Flex
@@ -492,9 +393,11 @@ export default function Page() {
                 fontFamily="Poppins"
                 fontSize={mobile ? "1.2rem" : "1.6rem"}
               >
-                Depois, construímos o melhor Funil de Captura e Vendas da sua
-                Cidade ou Estado. Deixe todo trabalho de captação e tráfego
-                inteligente por nossa conta.
+                Nós construímos o melhor funil de captura e vendas para sua
+                clínica ou consultório médico, utilizando estratégias de tráfego
+                inteligente para atrair e converter pacientes potenciais em sua
+                cidade ou estado. Deixe essa tarefa conosco e concentre-se em
+                atender seus pacientes com excelência.
               </Text>
             </Flex>
           </SimpleGrid>
@@ -536,9 +439,12 @@ export default function Page() {
                 fontFamily="Poppins"
                 fontSize={mobile ? "1.2rem" : "1.6rem"}
               >
-                Dessa forma, obtenha os melhores anúncios online, exclusivos e
-                focados no seu negócio. E assim, aumente a relevância das suas
-                redes sociais e atinja o Top of Mind dos seus clientes ideais.
+                Com nossa abordagem personalizada, criamos anúncios online
+                exclusivos e direcionados para o seu negócio médico, aumentando
+                a relevância de suas redes sociais e permitindo que você atinja
+                o topo da mente de seus clientes ideais. Conte conosco para
+                destacar sua clínica ou consultório médico na internet e atrair
+                mais pacientes de forma eficaz.
               </Text>
             </Flex>
             <Flex
@@ -571,9 +477,13 @@ export default function Page() {
                 fontFamily="Poppins"
                 fontSize={mobile ? "1.2rem" : "1.6rem"}
               >
-                Por fim, estruturamos um Dashboard analítico e prático para você
-                acompanhar todos os processos do seu novo Funil. Além de
-                disponibilizarmos o melhor suporte do Brasil.
+                Oferecemos um dashboard analítico e prático para que você possa
+                acompanhar de perto todos os processos do seu novo funil de
+                captura e vendas, garantindo transparência e controle sobre suas
+                campanhas de tráfego pago. Além disso, estamos sempre prontos
+                para oferecer o melhor suporte do Brasil, garantindo que sua
+                clínica ou consultório médico tenha todo o apoio necessário para
+                alcançar o sucesso.
               </Text>
             </Flex>
           </SimpleGrid>
@@ -614,16 +524,20 @@ export default function Page() {
               fontFamily="Poppins"
               fontSize={mobile ? "1.1rem" : "1.3rem"}
             >
-              Carevie é uma consultoria de negócios e marketing projetada para
-              implementar ou aprimorar os processos de vendas da sua clínica
-              odontológica. <br />
-              <br />
-              Somos compostos por profissionais médicos e digitais experientes
-              que geraram milhões de dólares em receita. <br />
-              <br /> Na Carevie, focamos em fornecer soluções estratégicas de
-              negócios e marketing especificamente para clínicas odontológicas.
-              Nossa equipe de profissionais médicos pode ajudá-lo a melhorar o
-              desempenho do seu negócio digital e obter melhores resultados."
+              Bem-vindo ao CareVie, a solução perfeita para impulsionar o
+              sucesso do seu consultório médico! Com anos de experiência em
+              marketing online,, nossa equipe especializada está pronta para
+              desenvolver estratégias personalizadas que ajudarão o seu negócio
+              a crescer e se destacar no mercado.
+              <br /><br />
+              Com o CareVie, você terá acesso a um conjunto completo de serviços
+              de publicidade online, focados em trazer resultados efetivos para
+              o seu consultório médico. Nossa abordagem é personalizada para
+              atender às suas necessidades específicas, e estamos sempre
+              atualizados com as últimas tendências do mercado. Não deixe que a
+              concorrência o deixe para trás. Entre em contato com a equipe do
+              CareVie hoje mesmo e comece a impulsionar o sucesso do seu
+              consultório médico!
             </Text>
             {!mobile && (
               <Flex
@@ -894,7 +808,11 @@ export default function Page() {
             <Text fontFamily="Poppins" fontSize={mobile ? "1rem" : "1rem"}>
               contato@carevie.com
             </Text>
-            <Text fontFamily="Poppins" mt="4" fontSize={mobile ? "1rem" : "1rem"}>
+            <Text
+              fontFamily="Poppins"
+              mt="4"
+              fontSize={mobile ? "1rem" : "1rem"}
+            >
               Calçada Antares, 1444 - Alphaville | CEP: 06443-065
             </Text>
             <Text
