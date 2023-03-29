@@ -57,11 +57,13 @@ import {
 } from "react-icons/si";
 
 import useMediaQuery from "../utils/useMediaQuery";
+import { useRouter } from "next/router";
 
 export default function Page() {
   const { mobile, tablet, desktop } = useMediaQuery();
 
   const toast = useToast();
+  const router = useRouter();
 
   const [getInTouch, setGetInTouch] = useState(false);
 
@@ -187,6 +189,12 @@ export default function Page() {
                 </Text>
 
                 <Flex
+                  onClick={() => {
+                    router.push(
+                      "https://calendly.com/contato-iluminicomunicacoes/marketingmedico"
+                    );
+                  }}
+                  cursor="pointer"
                   zIndex={999}
                   mt="10"
                   bg="#014BEA"
@@ -260,6 +268,12 @@ export default function Page() {
               </Text> */}
 
               <Flex
+                cursor="pointer"
+                onClick={() => {
+                  router.push(
+                    "https://calendly.com/contato-iluminicomunicacoes/marketingmedico"
+                  );
+                }}
                 zIndex={999}
                 mt="10"
                 bg="#014BEA"
@@ -533,6 +547,12 @@ export default function Page() {
             </Text>
             {!mobile && (
               <Flex
+                cursor="pointer"
+                onClick={() => {
+                  router.push(
+                    "https://calendly.com/contato-iluminicomunicacoes/marketingmedico"
+                  );
+                }}
                 mt="10"
                 bg="#014BEA"
                 justify="center"
@@ -563,6 +583,12 @@ export default function Page() {
             )}
             {mobile && (
               <Flex
+                cursor="pointer"
+                onClick={() => {
+                  router.push(
+                    "https://calendly.com/contato-iluminicomunicacoes/marketingmedico"
+                  );
+                }}
                 bg="#014BEA"
                 justify="center"
                 align="center"
@@ -737,7 +763,13 @@ export default function Page() {
           </SimpleGrid>
           <Flex p={mobile ? "8" : 0}>
             <Flex
-            mx="auto"
+              cursor="pointer"
+              onClick={() => {
+                router.push(
+                  "https://calendly.com/contato-iluminicomunicacoes/marketingmedico"
+                );
+              }}
+              mx="auto"
               w="90%"
               mt="10"
               bg="#014BEA"
@@ -748,7 +780,12 @@ export default function Page() {
               px="6"
               boxShadow="0px 0px 14px 4px #014BEA"
             >
-              <Text color="#FFF" fontWeight="bold" textAlign="center" fontFamily="Poppins">
+              <Text
+                color="#FFF"
+                fontWeight="bold"
+                textAlign="center"
+                fontFamily="Poppins"
+              >
                 CLIQUE E AGENDE SUA SESSÃO ESTRATÉGICA GRATUITA
               </Text>
             </Flex>
