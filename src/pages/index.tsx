@@ -161,14 +161,13 @@ export default function Page() {
           </Flex>
         ) : (
           <Flex h={mobile ? "auto" : "100vh"} bg="#000102" flexDir="column">
-            <Flex h="100%" w="100%" pt={100} px={100}>
+            <Flex h="100%" w="100%" pt={50} px={100}>
               <Flex
                 zIndex={2}
                 flexDir="column"
                 color="#FFF"
                 p="8"
                 w={mobile ? "100%" : 700}
-                overflowX="hidden"
               >
                 <Image
                   src="/carevie.png"
@@ -178,27 +177,17 @@ export default function Page() {
                   }}
                 />
                 <Text
-                  mt="10vh"
+                  mt="13.5vh"
                   fontFamily="Poppins"
                   fontWeight="bold"
-                  fontSize={mobile ? "1.5rem" : tablet ? "2.5rem" : "2.5rem"}
+                  fontSize={mobile ? "1.5rem" : tablet ? "2.5rem" : "2.4rem"}
                 >
-                  Cuidando da sua presença digital e alcançando novos pacientes
-                  com nossas soluções de marketing para consultórios médicos.
+                  Sua estratégia de marketing médico personalizada. <br />
+                  Resultados comprovados e compromisso com excelência.
                 </Text>
-                <Text
-                  fontFamily="Poppins"
-                  maxW={mobile ? 600 : 700}
-                  mt="6"
-                  fontSize={mobile ? "1rem" : "1.3rem"}
-                >
-                  Sua estratégia de marketing médico personalizada - Resultados
-                  comprovados e compromisso com excelência. Aumente sua presença
-                  online e conquiste mais pacientes com nossos serviços de
-                  tráfego pago para consultórios médicos, utilizando a nossa
-                  metodologia "Medboost"
-                </Text>
+
                 <Flex
+                  zIndex={999}
                   mt="10"
                   bg="#014BEA"
                   justify="center"
@@ -215,10 +204,11 @@ export default function Page() {
                 </Flex>
 
                 <Flex
-                  h={800}
-                  w={800}
+                  h={"30vw"}
+                  w={"30vw"}
                   position="absolute"
                   zIndex={0}
+                  mt={"13.5vh"}
                   right={20}
                   style={{
                     borderRadius: "50%",
@@ -247,7 +237,7 @@ export default function Page() {
               <Text
                 fontFamily="Poppins"
                 textAlign={mobile ? "left" : "center"}
-                fontSize={mobile ? "1.5rem" : "2.6rem"}
+                fontSize={mobile ? "1.5rem" : "2.3rem"}
                 fontWeight="bold"
                 mt={mobile ? -10 : 0}
               >
@@ -255,7 +245,7 @@ export default function Page() {
                 <br />e alcançando novos pacientes com nossas soluções de
                 marketing para consultórios médicos.
               </Text>
-              <Text
+              {/* <Text
                 mt="6"
                 maxW={mobile ? 400 : 700}
                 fontFamily="Poppins"
@@ -267,9 +257,10 @@ export default function Page() {
                 online e conquiste mais pacientes com nossos serviços de tráfego
                 pago para consultórios médicos, utilizando a nossa metodologia
                 "Medboost"
-              </Text>
+              </Text> */}
 
               <Flex
+                zIndex={999}
                 mt="10"
                 bg="#014BEA"
                 justify="center"
@@ -529,7 +520,8 @@ export default function Page() {
               marketing online,, nossa equipe especializada está pronta para
               desenvolver estratégias personalizadas que ajudarão o seu negócio
               a crescer e se destacar no mercado.
-              <br /><br />
+              <br />
+              <br />
               Com o CareVie, você terá acesso a um conjunto completo de serviços
               de publicidade online, focados em trazer resultados efetivos para
               o seu consultório médico. Nossa abordagem é personalizada para
@@ -745,6 +737,8 @@ export default function Page() {
           </SimpleGrid>
           <Flex p={mobile ? "8" : 0}>
             <Flex
+            mx="auto"
+              w="90%"
               mt="10"
               bg="#014BEA"
               justify="center"
@@ -752,15 +746,9 @@ export default function Page() {
               borderRadius="5"
               py="3"
               px="6"
-              w="-webkit-fit-content"
-              boxShadow="0px 0px 28px 4px #014BEA"
+              boxShadow="0px 0px 14px 4px #014BEA"
             >
-              <Text
-                color="#FFF"
-                fontWeight="bold"
-                textAlign="center"
-                fontFamily="Poppins"
-              >
+              <Text color="#FFF" fontWeight="bold" textAlign="center" fontFamily="Poppins">
                 CLIQUE E AGENDE SUA SESSÃO ESTRATÉGICA GRATUITA
               </Text>
             </Flex>
