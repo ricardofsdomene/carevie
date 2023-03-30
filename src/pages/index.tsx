@@ -547,23 +547,28 @@ export default function Page() {
             </Text>
             {!mobile && (
               <Flex
+                mt={50}
                 cursor="pointer"
                 onClick={() => {
                   router.push(
                     "https://calendly.com/contato-iluminicomunicacoes/marketingmedico"
                   );
                 }}
-                mt="10"
                 bg="#014BEA"
                 justify="center"
                 align="center"
                 borderRadius="5"
                 py="3"
+                w="60%"
                 px="6"
-                w="-webkit-fit-content"
                 boxShadow="0px 0px 14px 4px #014BEA"
               >
-                <Text color="#FFF" fontWeight="bold" fontFamily="Poppins">
+                <Text
+                  color="#FFF"
+                  fontWeight="bold"
+                  textAlign="center"
+                  fontFamily="Poppins"
+                >
                   CLIQUE E AGENDE SUA SESSÃO ESTRATÉGICA GRATUITA
                 </Text>
               </Flex>
@@ -575,7 +580,7 @@ export default function Page() {
                 src="https://images.pexels.com/photos/5867730/pexels-photo-5867730.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 style={{
                   borderRadius: 10,
-                  boxShadow: "rgba(122, 178, 238, 0.6) 0 0 50px",
+                  boxShadow: "rgba(122, 178, 238, 0.4) 0 0 150px",
                   height: "auto",
                   width: mobile ? "80%" : "100%",
                 }}
@@ -663,8 +668,8 @@ export default function Page() {
             columns={[1, 1, 2, 2, 2, 2]}
             spacing="0px"
           >
-            <Item label="Dentistas que desejam: Aumentar o fluxo de pacientes nos seus consultórios, elevando seu faturamento líquido e serem melhor remunerados pela hora trabalhada." />
-            <Item label="Dentistas que desejam: Largar a vida corrida de plantões e ter mais tempo para viver a vida sob suas próprias regras, sejam elas quais forem." />
+            <Item label="Médicos que desejam: Aumentar o fluxo de pacientes nos seus consultórios, elevando seu faturamento líquido e serem melhor remunerados pela hora trabalhada." />
+            <Item label="Médicos que desejam: Largar a vida corrida de plantões e ter mais tempo para viver a vida sob suas próprias regras, sejam elas quais forem." />
           </SimpleGrid>
           <SimpleGrid
             mt="6"
@@ -674,8 +679,8 @@ export default function Page() {
             columns={[1, 1, 2, 2, 2, 2]}
             spacing="0px"
           >
-            <Item label="Dentistas que buscam maximizar suas taxas de conversão através da estruturação de um setor comercial sólido e robusto." />
-            <Item label="Clínicas e Dentistas que já possuem algum grau de inserção no mercado digital, mas que almejam atingir a excelência em termos de tráfego pago." />
+            <Item label="Médicos que buscam maximizar suas taxas de conversão através da estruturação de um setor comercial sólido e robusto." />
+            <Item label="Clínicas e Médicos que já possuem algum grau de inserção no mercado digital, mas que almejam atingir a excelência em termos de tráfego pago." />
           </SimpleGrid>
           <SimpleGrid
             mt="6"
@@ -685,8 +690,8 @@ export default function Page() {
             columns={[1, 1, 2, 2, 2, 2]}
             spacing="0px"
           >
-            <Item label="Dentistas e Médicos que procuram por uma assessoria de Marketing que enxerga o seu negócio como prioridade." />
-            <Item label="Clínicas e Dentistas que procuram por uma assessoria de Marketing que enxerga o seu negócio como prioridade." />
+            <Item label="Médicos e Médicos que procuram por uma assessoria de Marketing que enxerga o seu negócio como prioridade." />
+            <Item label="Clínicas e Médicos que procuram por uma assessoria de Marketing que enxerga o seu negócio como prioridade." />
           </SimpleGrid>
         </Flex>
       </Flex>
